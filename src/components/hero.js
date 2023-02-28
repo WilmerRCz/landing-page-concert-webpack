@@ -1,13 +1,19 @@
-import concertImage from "./assets/concert.jpg";
+import concertImage from "../assets/concert.jpg";
+import { form } from "./form";
 
 export const hero = () => {
+  const formSection = form()
   const container = document.createElement("div");
   container.classList.add("relative", "h-screen");
+
+
   const img = document.createElement("img");
   img.classList.add("absolute", "inset-0", "w-full", "h-full", "object-cover");
   img.src = concertImage;
   img.alt = "concert";
-  img.appendChild(container);
+  container.appendChild(img);
+
+
   const titleConcert = document.createElement("h1");
   titleConcert.textContent = "Concert: 30/03/2023 - Martin Garrix, L.A";
   titleConcert.classList.add(
@@ -20,5 +26,10 @@ export const hero = () => {
     "sm:text-3xl",
     "text-lg"
   );
-  titleConcert.appendChild(container);
+  container.appendChild(titleConcert);
+
+  
+  container.appendChild(formSection)
+
+  return container
 };

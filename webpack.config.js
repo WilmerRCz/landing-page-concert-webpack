@@ -36,7 +36,7 @@ module.exports = {
     ],
   },
   plugins: [new HtmlWebpackPlugin({
-    title: 'Webpack and Tailwind Starter'
+    title: 'landing page webpack'
   })],
   devServer: {
     static: {
