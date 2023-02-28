@@ -1,4 +1,4 @@
-export const cardContent = () => {
+export const cardContent = (iconClass) => {
   const container = document.createElement('div')
   container.classList.add('col-span-1', 'bg-slate-800','h-full', 'rounded', 'shadow-lg', 'p-4', 'hover:shadow-slate-600')
 
@@ -8,7 +8,8 @@ export const cardContent = () => {
 
 
   const icon = document.createElement('i')
-  icon.classList.add('fa-solid', 'fa-people-group', 'fa-5x','text-transparent', 'bg-clip-text', 'bg-gradient-to-r', 'from-green-500', 'to-amber-500')
+  icon.setAttribute('class', iconClass)
+  icon.classList.add('text-transparent', 'bg-clip-text', 'bg-gradient-to-r', 'from-green-500', 'to-amber-500')
   containerIcon.appendChild(icon)
 
 
