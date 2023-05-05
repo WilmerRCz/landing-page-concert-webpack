@@ -1,4 +1,4 @@
-import concertImage from "../assets/concert.jpg";
+import concertImage from "/public/concert.jpg";
 import { form } from "./form";
 
 export const hero = () => {
